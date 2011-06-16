@@ -1,0 +1,36 @@
+Article:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [title]
+  columns:
+    title: {type: string(255), notblank: true }
+    body: {type: text}
+
+Category:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+     fields: [name]
+  columns:
+    name: {type: string(255), notblank: true }
+    is_active: {type: boolean, default: true }
+
+Service:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+     fields: [name]
+  columns:
+    name: {type: string(255), notblank: true }
+    category: {type: integer, notnull: true }
+    feature_name: {type: string(255), notblank: true }
+    feature_value: {type: string(255), notblank: true }
+    monthly: {type: decimal }
+    quarterly: {type: decimal }
+    semi_annually: {type: decimal }
+    whm_url: {type: string(255), notblank: true }
+  relations:
+    Category: { class: Category, local: category, foreign: id, type: one, foreignType: many, foreignAlias: Service }
+
+
