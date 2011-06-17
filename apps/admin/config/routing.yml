@@ -1,3 +1,21 @@
+resource:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Resource
+    module:               resources
+    prefix_path:          /resources
+    column:               id
+    with_wildcard_routes: true
+
+feature:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Feature
+    module:               features
+    prefix_path:          /features
+    column:               id
+    with_wildcard_routes: true
+
 category:
   class: sfDoctrineRouteCollection
   options:

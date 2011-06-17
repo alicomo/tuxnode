@@ -5,6 +5,9 @@
 homepage:
   url:   /
   param: { module: home, action: index }
+contact:
+  url:  /contact
+  param: { module: contact, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

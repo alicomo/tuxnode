@@ -7,32 +7,38 @@
  * 
  * @property string $name
  * @property integer $category
- * @property string $feature_name
- * @property string $feature_value
  * @property decimal $monthly
  * @property decimal $quarterly
  * @property decimal $semi_annually
+ * @property decimal $annually
  * @property string $whm_url
+ * @property boolean $is_home
+ * @property boolean $is_service
  * @property Category $Category
+ * @property Doctrine_Collection $Resources
  * 
- * @method string   getName()          Returns the current record's "name" value
- * @method integer  getCategory()      Returns the current record's "category" value
- * @method string   getFeatureName()   Returns the current record's "feature_name" value
- * @method string   getFeatureValue()  Returns the current record's "feature_value" value
- * @method decimal  getMonthly()       Returns the current record's "monthly" value
- * @method decimal  getQuarterly()     Returns the current record's "quarterly" value
- * @method decimal  getSemiAnnually()  Returns the current record's "semi_annually" value
- * @method string   getWhmUrl()        Returns the current record's "whm_url" value
- * @method Category getCategory()      Returns the current record's "Category" value
- * @method Service  setName()          Sets the current record's "name" value
- * @method Service  setCategory()      Sets the current record's "category" value
- * @method Service  setFeatureName()   Sets the current record's "feature_name" value
- * @method Service  setFeatureValue()  Sets the current record's "feature_value" value
- * @method Service  setMonthly()       Sets the current record's "monthly" value
- * @method Service  setQuarterly()     Sets the current record's "quarterly" value
- * @method Service  setSemiAnnually()  Sets the current record's "semi_annually" value
- * @method Service  setWhmUrl()        Sets the current record's "whm_url" value
- * @method Service  setCategory()      Sets the current record's "Category" value
+ * @method string              getName()          Returns the current record's "name" value
+ * @method integer             getCategory()      Returns the current record's "category" value
+ * @method decimal             getMonthly()       Returns the current record's "monthly" value
+ * @method decimal             getQuarterly()     Returns the current record's "quarterly" value
+ * @method decimal             getSemiAnnually()  Returns the current record's "semi_annually" value
+ * @method decimal             getAnnually()      Returns the current record's "annually" value
+ * @method string              getWhmUrl()        Returns the current record's "whm_url" value
+ * @method boolean             getIsHome()        Returns the current record's "is_home" value
+ * @method boolean             getIsService()     Returns the current record's "is_service" value
+ * @method Category            getCategory()      Returns the current record's "Category" value
+ * @method Doctrine_Collection getResources()     Returns the current record's "Resources" collection
+ * @method Service             setName()          Sets the current record's "name" value
+ * @method Service             setCategory()      Sets the current record's "category" value
+ * @method Service             setMonthly()       Sets the current record's "monthly" value
+ * @method Service             setQuarterly()     Sets the current record's "quarterly" value
+ * @method Service             setSemiAnnually()  Sets the current record's "semi_annually" value
+ * @method Service             setAnnually()      Sets the current record's "annually" value
+ * @method Service             setWhmUrl()        Sets the current record's "whm_url" value
+ * @method Service             setIsHome()        Sets the current record's "is_home" value
+ * @method Service             setIsService()     Sets the current record's "is_service" value
+ * @method Service             setCategory()      Sets the current record's "Category" value
+ * @method Service             setResources()     Sets the current record's "Resources" collection
  * 
  * @package    tuxnode
  * @subpackage model
@@ -53,16 +59,6 @@ abstract class BaseService extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              ));
-        $this->hasColumn('feature_name', 'string', 255, array(
-             'type' => 'string',
-             'notblank' => true,
-             'length' => 255,
-             ));
-        $this->hasColumn('feature_value', 'string', 255, array(
-             'type' => 'string',
-             'notblank' => true,
-             'length' => 255,
-             ));
         $this->hasColumn('monthly', 'decimal', null, array(
              'type' => 'decimal',
              ));
@@ -72,10 +68,21 @@ abstract class BaseService extends sfDoctrineRecord
         $this->hasColumn('semi_annually', 'decimal', null, array(
              'type' => 'decimal',
              ));
+        $this->hasColumn('annually', 'decimal', null, array(
+             'type' => 'decimal',
+             ));
         $this->hasColumn('whm_url', 'string', 255, array(
              'type' => 'string',
              'notblank' => true,
              'length' => 255,
+             ));
+        $this->hasColumn('is_home', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
+             ));
+        $this->hasColumn('is_service', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
              ));
     }
 
@@ -85,6 +92,10 @@ abstract class BaseService extends sfDoctrineRecord
         $this->hasOne('Category', array(
              'local' => 'category',
              'foreign' => 'id'));
+
+        $this->hasMany('Resource as Resources', array(
+             'local' => 'id',
+             'foreign' => 'service'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $sluggable0 = new Doctrine_Template_Sluggable(array(

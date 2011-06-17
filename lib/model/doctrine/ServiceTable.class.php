@@ -16,4 +16,13 @@ class ServiceTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Service');
     }
+
+    public function getHomePlans($category) {
+      return $this->createQuery('a')
+          ->leftJoin('a.Category c')
+          ->where('c.name = ?', $category)
+          ->orderBy('a.annually ASC')
+          ->limit(1)
+          ->execute();
+    }
 }

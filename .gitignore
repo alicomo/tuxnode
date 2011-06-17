@@ -1,0 +1,9 @@
+src/cache/*
+src/log/*
+nbproject/*
+src/nbproject/*
+src/config/databases.yml
+*.settings
+*.buildpath
+*.project
+*DS_Store

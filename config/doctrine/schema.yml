@@ -24,13 +24,30 @@ Service:
   columns:
     name: {type: string(255), notblank: true }
     category: {type: integer, notnull: true }
-    feature_name: {type: string(255), notblank: true }
-    feature_value: {type: string(255), notblank: true }
     monthly: {type: decimal }
     quarterly: {type: decimal }
     semi_annually: {type: decimal }
+    annually: {type: decimal }
     whm_url: {type: string(255), notblank: true }
+    is_home: {type: boolean, default: false }
+    is_service: {type: boolean, default: false }
   relations:
     Category: { class: Category, local: category, foreign: id, type: one, foreignType: many, foreignAlias: Service }
 
+Feature:
+  actAs:
+    Timestampable: ~
+  columns:
+    name: {type: string(255), notblank: true }
+    is_active: {type: boolean, default: true }
 
+Resource:
+  actAs:
+    Timestampable: ~
+  columns:
+    service: {type: integer, notnull: true }
+    feature: {type: integer }
+    resource: {type: string(255), notblank: true }
+  relations:
+    Service: { class: Service, local: service, foreign: id, type: one, foreignType: many, foreignAlias: Resources }
+    Feature: { class: Feature, local: feature, foreign: id, type: one, foreignType: many, foreignAlias: FeatureResource }
