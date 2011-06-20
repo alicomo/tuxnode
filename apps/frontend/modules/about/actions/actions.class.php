@@ -12,9 +12,8 @@ class aboutActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->articles = Doctrine_Core::getTable('Article')
-      ->createQuery('a')
-      ->execute();
+    $this->article = Doctrine_Core::getTable('Article')->findOneBy('slug','about-us');
+    
   }
 
 }

@@ -18,6 +18,8 @@ class homeActions extends sfActions
     $this->reseller_resources = Doctrine_Core::getTable('Resource')->findByService($this->reseller->getFirst()->getId());
     $this->servers = Doctrine_Core::getTable('Service')->getHomePlans('Servers');
     $this->servers_resources = Doctrine_Core::getTable('Resource')->findByService($this->servers->getFirst()->getId());
+    $this->article_home = Doctrine::getTable('Article')->findOneById(1);
+
 
   }
 

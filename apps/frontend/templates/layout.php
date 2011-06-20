@@ -29,7 +29,7 @@ Cufon.replace('h1, h2, h3, h4, h5, .teaser_title, .teaser_text, th,', { hover:tr
 <body id="stretched">
 <!-- #wrap_all -->
 <div id="wrap_all">
-<div id="contact"></div>
+
 
 <!-- #wrapper -->
 <div id="wrapper" class="rightsidebar">
@@ -40,31 +40,31 @@ Cufon.replace('h1, h2, h3, h4, h5, .teaser_title, .teaser_text, th,', { hover:tr
 
         <ul id="pri-menu" class="nav">
             	<li class="current-menu-item"> <a href="<?php echo url_for('@homepage') ?>">Home</a></li>
-                <li><a href="singlepage.html">Domain Registration</a></li>
-                <li><a href="singlepage.html">Web Hosting</a></li>
-                <li><a href="singlepage.html">Reseller Hosting</a></li>
-                <li><a href="singlepage.html">Servers</a></li>
+                <li><a href="<?php echo url_for('web_hosting/index') ?>">Web Hosting</a></li>
+                <li><a href="<?php echo url_for('reseller_hosting/index') ?>">Reseller Hosting</a></li>
+                <li><a href="<?php echo url_for('servers/index') ?>">Servers</a></li>
+                <li><div id="contact" align="right" style="padding-left: 100px;">Call&nbsp;<span style="color:#fff;">+1951557104 Ext: 3</span>&nbsp;Email&nbsp;<span style="color:#fff;">support@tuxnode.com</span></div></li>
 	</ul>
+                              
 		</div>
 	</div>
 	<!-- .top_menu -->
-
+        
 	<!-- #header-->
     <div id="header">
 		<div class="inner">
     		<!-- .logo -->
         	<div class="logo">
-				<a href="#"><img src="/images/logo.png" alt="logo" /></a>
+				<a href="<?php echo url_for('@homepage') ?>"><img src="/images/logo.png" alt="logo" /></a>
 			</div>
         	<!-- .logo -->
 			<div class="sec-menu">
         	<ul class="nav">
-                <li><a href="#">Compare Plans</a></li>
-                <li><a href="#">FAQS</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="about.html">Support</a></li>
+                <li><a href="<?php echo url_for('about/index') ?>">About Us</a></li>
+                <li><a href="http://support.tuxnode.com" target="_blank">Support</a></li>
                 <li><a href="<?php echo url_for('@contact') ?>">Contact</a></li>
 		</ul>
+  
 			</div>
 
 		</div>
@@ -83,50 +83,26 @@ Cufon.replace('h1, h2, h3, h4, h5, .teaser_title, .teaser_text, th,', { hover:tr
 		<!-- .one_fifth -->
 		<div class="one_fifth">
 			<div class="widget">
-			<h3>Latest Tweets</h3>
-      	    <ul class="tweets">
-				<li><p>Time to call it a day. Another week done. Lorem ipsum <a href="#">http://bit.ly/1234</a>
-					<span>about 16 hours ago</span></p>
-				</li>
+			<a href="<?php echo url_for('@homepage') ?>"><img src="/images/logo.png" alt="logo" /></a>
+			
+                        </div>
+		</div>
+		<!-- .one_fifth -->
 
-				<li><p>Time to call it a day. Another week done. Lorem ipsum
-					<span>about 16 hours ago</span></p>
-				</li>
-		 	</ul>
-			</div>
+		<!-- .one_fifth -->
+		<div class="one_fifth" >
+			
+                           <div id="widget"  style="padding-left: 75px; padding-top: 25px; width:200px;">
+                            Call&nbsp;<span style="color:#fff;">+1951557104 Ext: 3</span><br>
+                            Email&nbsp;<span style="color:#fff;">support@tuxnode.com</span></div>
+                        
 		</div>
 		<!-- .one_fifth -->
 
 		<!-- .one_fifth -->
 		<div class="one_fifth">
 			<div class="widget">
-			<h3>Blogroll</h3>
-			<ul>
-				<li><a href="#">Documentation</a></li>
-				<li><a href="#">Plugins</a></li>
-				<li><a href="#">Suggest Ideas</a></li>
-				<li><a href="#">Support Forum</a></li>
-				<li><a href="#">Themes</a></li>
-				<li><a href="#">WordPress Blog</a></li>
-				<li><a href="#">WordPress Planet</a></li>
-			</ul>
-			</div>
-		</div>
-		<!-- .one_fifth -->
-
-		<!-- .one_fifth -->
-		<div class="one_fifth">
-			<div class="widget">
-			<h3>Page Layouts</h3>
-			<ul>
-				<li><a href="#">Home Page</a></li>
-				<li><a href="#">Company</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Support</a></li>
-				<li><a href="#">Webhosting</a></li>
-				<li><a href="#">Features</a></li>
-				<li><a href="#">Contact Us</a></li>
-			</ul>
+			&nbsp;
 			</div>
 		</div>
 		<!-- .one_fifth -->
@@ -136,13 +112,14 @@ Cufon.replace('h1, h2, h3, h4, h5, .teaser_title, .teaser_text, th,', { hover:tr
 			<div class="widget">
 			<h3>Categories</h3>
 			<ul>
-				<li><a href="#">Reseller Hosting</a></li>
-				<li><a href="#">Lorem ipsum</a></li>
-				<li><a href="#">Server Hosting</a></li>
-				<li><a href="#">Website Hosting</a></li>
-				<li><a href="#">Dedicated Hosting</a></li>
-				<li><a href="#">Photography</a></li>
-				<li><a href="#">WP Hosting</a></li>
+				<li><a href="<?php echo url_for('@homepage') ?>">Home Page</a></li>
+				<li><a href="<?php echo url_for('about/index') ?>">About</a></li>
+				<li><a href="<?php echo url_for('web_hosting/index') ?>">Web Hosting</a></li>
+                                <li><a href="<?php echo url_for('reseller_hosting/index') ?>">Reseller Hosting</a></li>
+                                <li><a href="<?php echo url_for('servers/index') ?>">Servers</a></li>
+				<li><a href="<?php echo url_for('about/index') ?>">About Us</a></li>
+                                <li><a href="http://support.tuxnode.com" target="_blank">Support</a></li>
+				<li><a href="<?php echo url_for('@contact') ?>">Contact</a></li>
 			</ul>
 			</div>
 		</div>
@@ -154,11 +131,9 @@ Cufon.replace('h1, h2, h3, h4, h5, .teaser_title, .teaser_text, th,', { hover:tr
 			<h3>Get in Touch</h3>
 <p>
 <strong>Postal Address</strong><br />
-Envato<br />
-PO Box 21177<br />
-Little Lonsdale St, Melbourne<br />
-Victoria 8011 Australia<br />
-Street Address<br />
+14350 60th St North<br />
+Suite: 18354 <br />
+Clearwater  FL. 33760<br />
 </p>
 			<ul class="social">
 				<li><a href="#" title="Delicious" ><img src="images/delicious.png" alt=""  /></a></li>
@@ -181,7 +156,7 @@ Street Address<br />
 <!-- .copyright -->
 <div class="copyright">
 	<div class="inner">
-		<p>Copyright &copy;2010 Webhost Hosting. All rights reserved   &nbsp;|&nbsp;   <a href="company.html" title="Privacy Policy Information">Privacy Policy</a>
+		<p>Copyright &copy;2011 Tuxnode Networks Ltd. All rights reserved   &nbsp;|&nbsp;   
 		<a href="#">Valid HTML 5</a></p>
 	</div>
 </div>
