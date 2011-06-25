@@ -2,6 +2,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn: 'mysql:host=localhost;dbname=tuxnode'
-      username: root
-      password: illualidb
+      dsn: 'mysql:host=localhost;dbname=tuxnode_main'
+      username: tuxnode_main
+      password: ,5Zn#Af{S}[m

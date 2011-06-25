@@ -12,7 +12,16 @@
 Cufon.replace('h1, h2, h3, h4, h5, .teaser_title, .teaser_text, th,', { hover:true });
 /* ]]> */
 </script>
-
+<!-- Start of Zopim Live Chat Script -->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=
+z.s=d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o
+){z.set._.push(o)};$.setAttribute('charset','utf-8');$.async=!0;z.set.
+_=[];$.src=('https:'==d.location.protocol?'https://ssl':'http://cdn')+
+'.zopim.com/?akrWFy4cv4pIUDmziNVQt93yyI8rbds6';$.type='text/java'+s;z.
+t=+new Date;z._=[];e.parentNode.insertBefore($,e)})(document,'script')
+</script>
+<!-- End of Zopim Live Chat Script -->
 <!--[if IE 6]>
 <script src="DD_belatedPNG.js" type="text/javascript"></script>
 <script>
