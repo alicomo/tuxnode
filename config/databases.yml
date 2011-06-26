@@ -1,7 +1,0 @@
-all:
-  doctrine:
-    class: sfDoctrineDatabase
-    param:
-      dsn: 'mysql:host=localhost;dbname=tuxnode_main'
-      username: tuxnode_main
-      password: ,5Zn#Af{S}[m

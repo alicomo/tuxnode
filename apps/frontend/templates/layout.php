@@ -126,7 +126,6 @@ t=+new Date;z._=[];e.parentNode.insertBefore($,e)})(document,'script')
 				<li><a href="<?php echo url_for('web_hosting/index') ?>">Web Hosting</a></li>
                                 <li><a href="<?php echo url_for('reseller_hosting/index') ?>">Reseller Hosting</a></li>
                                 <li><a href="<?php echo url_for('servers/index') ?>">Servers</a></li>
-				<li><a href="<?php echo url_for('about/index') ?>">About Us</a></li>
                                 <li><a href="http://support.tuxnode.com" target="_blank">Support</a></li>
 				<li><a href="<?php echo url_for('@contact') ?>">Contact</a></li>
 			</ul>
