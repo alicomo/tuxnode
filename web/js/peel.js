@@ -7,12 +7,12 @@ smartredfox.link_url = escape('http://www.tuxnode.com');
 smartredfox.container = '';
 
 //What images do you want to show
-smartredfox.small_image = '/images/small.jpg';
-smartredfox.big_image = '/images/large.jpg';
+smartredfox.small_image = '../images/small.jpg';
+smartredfox.big_image = '../images/large.jpg';
 
 //Leave all the rest alone
-smartredfox.small_path = 'small.swf';
-smartredfox.big_path = 'large.swf';
+smartredfox.small_path = '../images/small.swf';
+smartredfox.big_path = '../images/large.swf';
 
 smartredfox.small_params = escape(smartredfox.container) + smartredfox.small_path + '?ico=' + escape(smartredfox.container) + smartredfox.small_image;
 smartredfox.big_params = escape(smartredfox.container) + smartredfox.big_path + '?big=' + escape(smartredfox.container) + smartredfox.big_image + '&ad_url=' + smartredfox.link_url;

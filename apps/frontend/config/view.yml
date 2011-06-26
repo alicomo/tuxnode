@@ -8,13 +8,13 @@ default:
   metas:
     title:        Tuxnode - Framework Hosting
     description:  We are providing advanced framework hosting solutions for zend framework, symfony , cake php, code igniter etc
-    keywords:     symfony hosting, zend framework , web hosting reseller hosting
+    keywords:     symfony hosting, zend framework hosting , web hosting reseller hosting
     language:     en
     robots:       index, follow
 
   stylesheets:    [main.css, reset.css, style.css, uttons.css, litegrey.css]
 
-  javascripts:    [jquery-1.4.min.js, jquery.easing.min.js, jquery.tipsy.js, custom.js, cufon-yui.js, Dezen_Pro_Regular.js]
+  javascripts:    [jquery-1.4.min.js, jquery.easing.min.js, jquery.tipsy.js, custom.js, cufon-yui.js, Dezen_Pro_Regular.js, peel.js]
 
   has_layout:     true
   layout:         layout
